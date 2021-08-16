@@ -10,7 +10,7 @@
                       Width="610" Height="430" Icon="../icon.ico"
                       Foreground="{DynamicResource BlackBrush}"
                       d:DataContext="{d:DesignInstance ui:PreferencesViewModel}" mc:Ignorable="d"
-                      ShowTitleBar="False" ShowMinButton="False" ShowMaxRestoreButton="False"
+                      IsWindowDraggable="True" ShowTitleBar="True" ShowMinButton="True" ShowMaxRestoreButton="False"
                       SaveWindowPosition="True" utilities:DesignTimeHelper.Background="Black"
                       Name="PreferencesViewWindow">
     <Window.Resources>

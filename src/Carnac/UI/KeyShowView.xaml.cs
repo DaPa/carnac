@@ -184,7 +184,9 @@ namespace Carnac.UI
         private void OnMouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             var vm = ((KeyShowViewModel)DataContext);
-            vm.CursorPosition = PointFromScreen(new Point(e.X, e.Y));
+            try { // avoiding visual is not connected to a presentation source
+                vm.CursorPosition = PointFromScreen(new Point(e.X, e.Y));
+            } catch { return; }
         }
     }
 }
